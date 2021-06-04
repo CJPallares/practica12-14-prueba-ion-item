@@ -9,6 +9,7 @@ import { Note } from '../modelo/Note';
 })
 export class NotesPage implements OnInit {
   public notes: Note[]=[];
+  //Creamos un atributo notes de tipo array de objetos de la clase Note. Lo creamos vacío.
 
   // En el constructor de la clase inyectamos la clase AlertController, que nos va permitir el uso 
  // de ventanas emergentes.
@@ -24,7 +25,7 @@ export class NotesPage implements OnInit {
         {
           name: 'texto',  //el name debe ser 'texto' para que coincida con el nombre del campo del objeto Note
           type: 'text',
-          placeholder: 'texto'
+          placeholder: 'Escribe una nota de texto'
         }
       ],
       buttons: [
@@ -46,10 +47,10 @@ export class NotesPage implements OnInit {
     await alert.present();
   }
 
-
+// Creamos el método editNote. Le llega como parámetro un objeto del array notes.
   async editNote(note:Note) {
     const alert = await this.alertCtrl.create({
-      header: 'Add Note',
+      header: 'Edit Note',
       inputs: [
         {
           value: note.texto,
