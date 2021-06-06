@@ -6,6 +6,8 @@
 
 <ion-content>
   <ion-item-group *ngFor="let group of groupedContacts">
+  <!-- Cada group es un newGroup |contactos con misma letra inicial| que es un objeto con array
+  asociativo con contacts[] y letter y se meten con push en el atributo groupedContacts, dentro del método groupContacts(contacts) -->
     <ion-item-divider light>{{group.letter}}</ion-item-divider>
     <ion-item *ngFor="let contact of group.contacts">{{contact}}</ion-item>
   </ion-item-group>

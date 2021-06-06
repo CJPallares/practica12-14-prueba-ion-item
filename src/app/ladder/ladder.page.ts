@@ -35,10 +35,10 @@ export class LadderPage implements OnInit {
 
   }//end_constructor
 
-  reorderItems(indexes) {
+  /*reorderItems(indexes) {
     //this.ladder = reorderArray(this.ladder, indexes);
     console.log(indexes);
-  }
+  }*/
 
   onRenderItems(event) {
     console.log(`Move item from ${event.detail.from} to ${event.detail.to}`);
@@ -51,3 +51,5 @@ export class LadderPage implements OnInit {
   }
 
 }//end_class
+
+
